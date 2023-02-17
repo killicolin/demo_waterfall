@@ -15,15 +15,19 @@ __webpack_require__.r(__webpack_exports__);
 let component_id="spectre-analyser";
 let mouse_value_display_id="mouse-value";
 let slider_id="waterfall-slider";
+let time_value_id="time";
+let time_button_id="time_valid";
 
 let waterfall = spectral_graph__WEBPACK_IMPORTED_MODULE_0__["WaterfallGraph"].new(800,600,800,600,component_id);
 waterfall.run();
 
 let data_size = 0;
-setInterval(add_basic_data, 100);
+var interval_id=setInterval(add_basic_data, 100);
 let waterfallCanvas = document.getElementById(component_id);
 let mouse_value_display = document.getElementById(mouse_value_display_id);
 let slider = document.getElementById(slider_id);
+let time_value=document.getElementById(time_value_id);
+let time_button=document.getElementById(time_button_id);
 let should_look_mouse_value=false;
 requestAnimationFrame(step);
 
@@ -33,6 +37,13 @@ waterfallCanvas.addEventListener("mouseenter", () =>
 
 waterfallCanvas.addEventListener("mouseleave", () =>
   should_look_mouse_value=false
+);
+
+time_button.addEventListener("click", () => {
+    console.log("test");
+    clearInterval(interval_id);
+    interval_id=setInterval(add_basic_data, time_value.value);
+  }
 );
 
 slider.addEventListener('input', () => {

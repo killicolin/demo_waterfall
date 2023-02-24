@@ -58,14 +58,20 @@
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
+/******/ 					"__wbindgen_is_array": function(p0i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_is_array"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_number_get": function(p0i32,p1i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_number_get"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
+/******/ 					},
 /******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_cb_drop": function(p0i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_cb_drop"](p0i32);
-/******/ 					},
-/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_new_abda76e883ba8a5f": function() {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbg_new_abda76e883ba8a5f"]();
@@ -81,9 +87,6 @@
 /******/ 					},
 /******/ 					"__wbindgen_boolean_get": function(p0i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_boolean_get"](p0i32);
-/******/ 					},
-/******/ 					"__wbindgen_number_get": function(p0i32,p1i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_number_get"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_number_new": function(p0f64) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_number_new"](p0f64);
@@ -994,6 +997,9 @@
 /******/ 					"__wbindgen_is_undefined": function(p0i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
 /******/ 					},
+/******/ 					"__wbg_from_67ca20fa722467e6": function(p0i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbg_from_67ca20fa722467e6"](p0i32);
+/******/ 					},
 /******/ 					"__wbg_of_892d7838f8e4cc20": function(p0i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbg_of_892d7838f8e4cc20"](p0i32);
 /******/ 					},
@@ -1051,18 +1057,6 @@
 /******/ 					"__wbindgen_memory": function() {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_memory"]();
 /******/ 					},
-/******/ 					"__wbindgen_closure_wrapper805": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper805"](p0i32,p1i32,p2i32);
-/******/ 					},
-/******/ 					"__wbindgen_closure_wrapper807": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper807"](p0i32,p1i32,p2i32);
-/******/ 					},
-/******/ 					"__wbindgen_closure_wrapper809": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper809"](p0i32,p1i32,p2i32);
-/******/ 					},
-/******/ 					"__wbindgen_closure_wrapper811": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper811"](p0i32,p1i32,p2i32);
-/******/ 					},
 /******/ 					"__wbindgen_closure_wrapper813": function(p0i32,p1i32,p2i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper813"](p0i32,p1i32,p2i32);
 /******/ 					},
@@ -1078,11 +1072,23 @@
 /******/ 					"__wbindgen_closure_wrapper821": function(p0i32,p1i32,p2i32) {
 /******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper821"](p0i32,p1i32,p2i32);
 /******/ 					},
-/******/ 					"__wbindgen_closure_wrapper952": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper952"](p0i32,p1i32,p2i32);
+/******/ 					"__wbindgen_closure_wrapper823": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper823"](p0i32,p1i32,p2i32);
 /******/ 					},
-/******/ 					"__wbindgen_closure_wrapper3709": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper3709"](p0i32,p1i32,p2i32);
+/******/ 					"__wbindgen_closure_wrapper825": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper825"](p0i32,p1i32,p2i32);
+/******/ 					},
+/******/ 					"__wbindgen_closure_wrapper827": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper827"](p0i32,p1i32,p2i32);
+/******/ 					},
+/******/ 					"__wbindgen_closure_wrapper829": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper829"](p0i32,p1i32,p2i32);
+/******/ 					},
+/******/ 					"__wbindgen_closure_wrapper959": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper959"](p0i32,p1i32,p2i32);
+/******/ 					},
+/******/ 					"__wbindgen_closure_wrapper3721": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./node_modules/spectral_graph/spectral_graph_bg.js"].exports["__wbindgen_closure_wrapper3721"](p0i32,p1i32,p2i32);
 /******/ 					}
 /******/ 				}
 /******/ 			};
@@ -1185,7 +1191,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"./node_modules/spectral_graph/spectral_graph_bg.wasm":"0b8a9429125ffcc2038c"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"./node_modules/spectral_graph/spectral_graph_bg.wasm":"f6ce112ad5313cba5a95"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {

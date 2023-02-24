@@ -1,10 +1,63 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
+/***/ "./node_modules/read-json-lines-sync/build/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/read-json-lines-sync/build/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _readJsonLines = __webpack_require__(/*! ./readJsonLines */ "./node_modules/read-json-lines-sync/build/readJsonLines.js");
+
+var _readJsonLines2 = _interopRequireDefault(_readJsonLines);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _readJsonLines2.default;
+
+/***/ }),
+
+/***/ "./node_modules/read-json-lines-sync/build/readJsonLines.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/read-json-lines-sync/build/readJsonLines.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function readJsonLines(string) {
+  return string.split('\n').filter(line => {
+    try {
+      JSON.parse(line);
+
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }).map(line => JSON.parse(line));
+}
+
+exports.default = readJsonLines;
+
+/***/ }),
+
 /***/ "./node_modules/spectral_graph/spectral_graph.js":
 /*!*******************************************************!*\
   !*** ./node_modules/spectral_graph/spectral_graph.js ***!
   \*******************************************************/
-/*! exports provided: __wbg_set_wasm, EventLoopJs, WaterfallGraph, WebglGraph, WebgpuGraph, WebgpuGraphJs, __wbindgen_object_drop_ref, __wbindgen_object_clone_ref, __wbindgen_cb_drop, __wbindgen_string_new, __wbg_new_abda76e883ba8a5f, __wbg_stack_658279fe44541cf6, __wbg_error_f851667af71bcfc6, __wbindgen_string_get, __wbindgen_boolean_get, __wbindgen_number_get, __wbindgen_number_new, __wbg_instanceof_WebGl2RenderingContext_61bb2cb23346dbb7, __wbg_beginQuery_fb152d8d84f2b130, __wbg_bindBufferRange_f2c529259df5358e, __wbg_bindSampler_6eb88b542e5a410f, __wbg_bindVertexArray_8b71290041cb6746, __wbg_blitFramebuffer_86eee8a5763ded5e, __wbg_bufferData_573e61c49a480c4d, __wbg_bufferData_16f948547d74c866, __wbg_bufferSubData_c7180c0b681078e8, __wbg_clearBufferfi_95daf829c568e58a, __wbg_clearBufferfv_b3c90fbed3b74920, __wbg_clearBufferiv_fe2a00a8f8fb7322, __wbg_clearBufferuiv_a41730a8d84c6ac6, __wbg_clientWaitSync_ae8f3712f85a57fb, __wbg_compressedTexSubImage2D_23b602b828848fb7, __wbg_compressedTexSubImage2D_d6c95fc640a9f4de, __wbg_compressedTexSubImage3D_00b794917e65d559, __wbg_compressedTexSubImage3D_c9c7b42e0f7db586, __wbg_copyBufferSubData_c903618a0e0a9fca, __wbg_copyTexSubImage3D_88fc9e1c56d3e7db, __wbg_createSampler_d1255ae3836b1bee, __wbg_createVertexArray_de7292bbd7ea02dd, __wbg_deleteQuery_0981fb4d492e46a7, __wbg_deleteSampler_6d832d1900eafbea, __wbg_deleteSync_f8f026807b7eee54, __wbg_deleteVertexArray_dc4f1b2e5ac93f24, __wbg_drawArraysInstanced_1222b6236d008088, __wbg_drawBuffers_3223f0aeb44f7057, __wbg_drawElementsInstanced_b4714f8dd90fd2a8, __wbg_endQuery_726967da9d5d1ca7, __wbg_fenceSync_fb3e1185847ee462, __wbg_framebufferTextureLayer_e644333b8ec36f9d, __wbg_getBufferSubData_cd8138c86821bca3, __wbg_getIndexedParameter_5f5c79f6c05edd18, __wbg_getQueryParameter_e0f43fb85f793bbe, __wbg_getSyncParameter_b2f55318719e958c, __wbg_getUniformBlockIndex_a05b0c144aa49817, __wbg_invalidateFramebuffer_696c3c456c34a207, __wbg_readBuffer_bade27c1171e00cf, __wbg_readPixels_493558abd28a3b61, __wbg_readPixels_92102ee9fe1c81a0, __wbg_renderbufferStorageMultisample_9cb173d2fd461513, __wbg_samplerParameterf_38ca759dc5c40461, __wbg_samplerParameteri_c631c02ceefc6dc1, __wbg_texStorage2D_89c29252632da923, __wbg_texStorage3D_3897fb6b91eb82d8, __wbg_texSubImage2D_6a8b0f3381d734c3, __wbg_texSubImage2D_53b6a050a0b9b24e, __wbg_texSubImage3D_84ef903e11598af0, __wbg_texSubImage3D_1d82135e9ce965bf, __wbg_uniform2fv_ffd0b1d3c3a4070a, __wbg_uniform2iv_32329f9a4d491136, __wbg_uniform3fv_bc831e48acb2c057, __wbg_uniform3iv_100a284f5a3cbca5, __wbg_uniform4fv_26d822da5c3fdb00, __wbg_uniform4iv_7f03c41e6e49bbd6, __wbg_uniformBlockBinding_1971f4528d9c3043, __wbg_uniformMatrix2fv_5f1f56c7cbfb533f, __wbg_uniformMatrix3fv_ae9271db8127a57b, __wbg_uniformMatrix4fv_0f42d678a568ded9, __wbg_vertexAttribDivisor_77f020121066a4d9, __wbg_vertexAttribIPointer_b15ad1437a268cf5, __wbg_activeTexture_0daf7c1698e49f00, __wbg_attachShader_3038234860d2d59d, __wbg_bindBuffer_9cb064991696b79f, __wbg_bindFramebuffer_0522db2a250c29f0, __wbg_bindRenderbuffer_1e4928d9bf839c02, __wbg_bindTexture_0c284b1604ba527c, __wbg_blendColor_a17ddceb3534e0b3, __wbg_blendEquation_b5d5be767bd3835a, __wbg_blendEquationSeparate_d2fa3b718ee3579f, __wbg_blendFunc_d456b0c766f8dbc9, __wbg_blendFuncSeparate_9a7146974b3cd76d, __wbg_colorMask_a7f067283ed312c9, __wbg_compileShader_af777dd3b15798b3, __wbg_copyTexSubImage2D_47b14ff8459fd4c8, __wbg_createBuffer_5ed0554ab35780b5, __wbg_createFramebuffer_86883935c13ddd59, __wbg_createProgram_7d25c1dd3bb0ce39, __wbg_createRenderbuffer_b392324e044d389a, __wbg_createShader_96339db58713e350, __wbg_createTexture_c651f9e28d1ce9d2, __wbg_cullFace_79e4ddbea13278b3, __wbg_deleteBuffer_cf67a696a7857b3f, __wbg_deleteFramebuffer_f9c2bceeb5422d9d, __wbg_deleteProgram_9c8fa1ef341cb01d, __wbg_deleteRenderbuffer_cad502ac8d1398f2, __wbg_deleteShader_f48f72524f5ee3ed, __wbg_deleteTexture_1b5f5e536e0d5545, __wbg_depthFunc_2060ec3687ac1f95, __wbg_depthMask_27d367443a80541d, __wbg_depthRange_7109c2393819a37b, __wbg_disable_3adb8645ea1d92d4, __wbg_disableVertexAttribArray_f469283fda607cee, __wbg_drawArrays_84de8a2416396807, __wbg_drawElements_dcb8df9c52e2bbd5, __wbg_enable_1ac9f14a577b7c8b, __wbg_enableVertexAttribArray_53139716d9c95dba, __wbg_framebufferRenderbuffer_77bdb2f359a5728f, __wbg_framebufferTexture2D_885176f16a153fec, __wbg_frontFace_3d7784c56ffede8a, __wbg_getActiveUniform_9c4ac7c1ccf5f894, __wbg_getExtension_f0070583175271d4, __wbg_getParameter_56d47f9b55e463d4, __wbg_getProgramInfoLog_7654794297967ac0, __wbg_getProgramParameter_5b1a40917aa850f8, __wbg_getShaderInfoLog_915d0e8506c11159, __wbg_getShaderParameter_f9240892c9e7a0a3, __wbg_getSupportedExtensions_7af8f7bbdd4d7b2c, __wbg_getUniformLocation_c6caabb349b43da7, __wbg_linkProgram_2d5cc584654696b8, __wbg_pixelStorei_a0b83efc92cd29fe, __wbg_polygonOffset_03d3955d5a1afa08, __wbg_renderbufferStorage_2192d9cd09128339, __wbg_scissor_2b084e0dc81d67f4, __wbg_shaderSource_57883245cdfb0dca, __wbg_stencilFuncSeparate_3be68afd7ca6efcc, __wbg_stencilMask_144b86d15d9fdbe6, __wbg_stencilMaskSeparate_84a2494b967772c7, __wbg_stencilOpSeparate_1708aea1aea0dc48, __wbg_texParameteri_e0ce3810261e0864, __wbg_uniform1f_dcc6951bde745417, __wbg_uniform1i_4fdc6d6740375d22, __wbg_uniform4f_19b349303edb7836, __wbg_useProgram_2f4094faf45ecba1, __wbg_vertexAttribPointer_ad370785358334f4, __wbg_viewport_cc41e28a71c23915, __wbg_instanceof_Window_e266f02eee43b570, __wbg_document_950215a728589a2d, __wbg_innerWidth_7e9d12e05bcb598e, __wbg_innerHeight_3ef25a30618357e0, __wbg_devicePixelRatio_5f8f5cab76864090, __wbg_cancelAnimationFrame_d079cdb83bc43b26, __wbg_matchMedia_967e50e4289050fa, __wbg_requestAnimationFrame_afe426b568f84138, __wbg_get_e6ae480a4b8df368, __wbg_clearTimeout_b2b8af0f044e02e9, __wbg_setTimeout_6609c9aa64f32bfc, __wbg_matches_7b5ad9e6bb56f1f3, __wbg_addListener_dfc3f9e430149b14, __wbg_removeListener_6f811d2fb59768b9, __wbg_size_5ce324b99223d189, __wbg_type_979610383a4b7c57, __wbg_name_1e6651aff4fe7a88, __wbg_drawArraysInstancedANGLE_403faa11d52ccf6d, __wbg_drawElementsInstancedANGLE_0230afc27cf9cec9, __wbg_vertexAttribDivisorANGLE_6bbb3df4c6e7d08b, __wbg_setProperty_21e2e7868b86a93e, __wbg_x_0938e87a3ff14a2e, __wbg_y_b881176a43492948, __wbg_pointerId_d2caae4465ba386f, __wbg_pressure_352c13794490720b, __wbg_pointerType_df759fa0bd6634ed, __wbg_deltaX_b7d127c94d6265c0, __wbg_deltaY_b32fa858e16edcc0, __wbg_deltaMode_11f7b19e64d9a515, __wbg_clientX_35f23f953e04ec0e, __wbg_clientY_8104e462abc0b3ec, __wbg_offsetX_413d9f02022e72ad, __wbg_offsetY_488f80a0a9666028, __wbg_ctrlKey_e1b8f1de1eb24d5d, __wbg_shiftKey_fdd99b6df96e25c5, __wbg_altKey_d531a4d3704557cb, __wbg_metaKey_934772989e28020c, __wbg_button_a1c470d5e4c997f2, __wbg_buttons_42a7b7de33d8e572, __wbg_movementX_f4d07f6658c1e16f, __wbg_movementY_30276c1f90aec4fa, __wbg_instanceof_HtmlCanvasElement_f5f69dab93281ebe, __wbg_width_a40e21a22129b197, __wbg_setwidth_81c62bc806e0a727, __wbg_height_98d51321254345a5, __wbg_setheight_98cf0db22c40ef07, __wbg_getContext_89a318b610dc5fd4, __wbg_matches_46e979ff3e4d0811, __wbg_bindVertexArrayOES_688eba003a98a0bb, __wbg_createVertexArrayOES_02cfe655604046eb, __wbg_deleteVertexArrayOES_ba22911f739464a7, __wbg_now_c644db5194be8437, __wbg_drawBuffersWEBGL_dfb0d803ea7ebe07, __wbg_fullscreenElement_65f14a4df7c25129, __wbg_createElement_e2a0e21263eb5416, __wbg_getElementById_eb93a47327bb5585, __wbg_querySelector_32b9d7ebb2df951d, __wbg_getBoundingClientRect_aaa701cbcb448965, __wbg_requestFullscreen_4eee04b9090fa98a, __wbg_setAttribute_79c9562d32d05e66, __wbg_setPointerCapture_5479dc0d082282b7, __wbg_style_2141664e428fef46, __wbg_bufferData_05664df801d7aec0, __wbg_bufferData_023700b2ed207c43, __wbg_bufferSubData_4e653f611d7a962d, __wbg_compressedTexSubImage2D_788296e97b316838, __wbg_readPixels_30de7174c15126d3, __wbg_texSubImage2D_57792696288b0a61, __wbg_uniform2fv_c29ce786946f1aae, __wbg_uniform2iv_58c3d5ee9e70c71d, __wbg_uniform3fv_5ca48b3279e0c643, __wbg_uniform3iv_0a103fe131bd9213, __wbg_uniform4fv_14f1c5ef10bfb4c9, __wbg_uniform4iv_9436eeda2a27cce8, __wbg_uniformMatrix2fv_1a40e9f63b2005c8, __wbg_uniformMatrix3fv_dcde28ba8c34d30e, __wbg_uniformMatrix4fv_4575a018c8188146, __wbg_activeTexture_01d5469eb22c10e7, __wbg_attachShader_14fb12e2ae589dc3, __wbg_bindBuffer_b7c382dcd70e33f6, __wbg_bindFramebuffer_a5ab0ed0463586cb, __wbg_bindRenderbuffer_2d67c879cdbe5ea9, __wbg_bindTexture_c1c0e00507424f8e, __wbg_blendColor_13739d87434b79c3, __wbg_blendEquation_562c3267161e4675, __wbg_blendEquationSeparate_48b95e78f7224be4, __wbg_blendFunc_f4365f78b650180f, __wbg_blendFuncSeparate_b508053691b6ebbe, __wbg_colorMask_99120a2c8caf1298, __wbg_compileShader_4e9130ccbd4a0238, __wbg_copyTexSubImage2D_7c0b0080eece3c1a, __wbg_createBuffer_8c64250e5283611c, __wbg_createFramebuffer_1f943a32c748753e, __wbg_createProgram_28db0ff3cee5f71a, __wbg_createRenderbuffer_a76dcfda7bdc749a, __wbg_createShader_c5fcd8592f47b510, __wbg_createTexture_81fd93af28301e0e, __wbg_cullFace_d4450f8718c6b3eb, __wbg_deleteBuffer_17feed38f3a70ec9, __wbg_deleteFramebuffer_130abca01c89b7d6, __wbg_deleteProgram_dd5f0e2bc555e270, __wbg_deleteRenderbuffer_385f3c9e8759b99e, __wbg_deleteShader_fac9fb3cdefdf6ec, __wbg_deleteTexture_605a36a7e380df5f, __wbg_depthFunc_00d8a905436dc681, __wbg_depthMask_134f9e3073ca4fd0, __wbg_depthRange_f34f19edea1feadd, __wbg_disable_65425605098b79cf, __wbg_disableVertexAttribArray_cf25f8beb5872364, __wbg_drawArrays_e5fa3cfc2b5d7c6d, __wbg_drawElements_a388832eba137ef0, __wbg_enable_2c3b6a4692af9b1b, __wbg_enableVertexAttribArray_6dd3d0668209ae19, __wbg_framebufferRenderbuffer_3bf1420713a0b21a, __wbg_framebufferTexture2D_ed03c0674b9979ce, __wbg_frontFace_00177185d2fae697, __wbg_getActiveUniform_e49dcda694ae15ab, __wbg_getParameter_d6cd2dd2cde656ec, __wbg_getProgramInfoLog_7fd2a7c6c1a280c1, __wbg_getProgramParameter_af1cfcccbbc80f71, __wbg_getShaderInfoLog_d057293074e59c61, __wbg_getShaderParameter_685d7d7092c6bae6, __wbg_getUniformLocation_b46e5db76599a918, __wbg_linkProgram_ca9df3fba2fd4125, __wbg_pixelStorei_f97b971917582269, __wbg_polygonOffset_fb73618b77fd3f6f, __wbg_renderbufferStorage_37eab84be1494aef, __wbg_scissor_8bc2e761846f53f0, __wbg_shaderSource_457e8bc42050401d, __wbg_stencilFuncSeparate_510d3287542b4574, __wbg_stencilMask_e1887eeaabe22771, __wbg_stencilMaskSeparate_e89abefeb5641657, __wbg_stencilOpSeparate_aa3d09aa448a6f48, __wbg_texParameteri_9fbb09bbf9670af4, __wbg_uniform1f_062c683ec584f7e8, __wbg_uniform1i_1f8256271b54cf41, __wbg_uniform4f_68fac972655f5359, __wbg_useProgram_6c9019d05fb8d280, __wbg_vertexAttribPointer_ccabef9be68fe1c4, __wbg_viewport_4bdfc4b8959593ee, __wbg_debug_8db2eed1bf6c1e2a, __wbg_error_fe807da27c4a4ced, __wbg_error_2d344a50ccf38b3b, __wbg_info_9e6db45ac337c3b5, __wbg_log_7bb108d119bafbc1, __wbg_warn_e57696dbb3977030, __wbg_addEventListener_615d4590d38da1c9, __wbg_addEventListener_cf5b03cd29763277, __wbg_removeEventListener_343e3ea9fe4c8533, __wbg_charCode_504e79c3e550d1bb, __wbg_keyCode_b33194be2ceec53b, __wbg_altKey_dff2a075455ac01b, __wbg_ctrlKey_993b558f853d64ce, __wbg_shiftKey_31e62e9d172b26f0, __wbg_metaKey_9f0f19692d0498bd, __wbg_key_f0decac219aa904b, __wbg_code_aed21120de275a12, __wbg_getModifierState_03b72700dbe33ad6, __wbg_appendChild_b8199dc1655c852d, __wbg_target_b629c177f9bee3da, __wbg_cancelBubble_c9a8182589205d54, __wbg_preventDefault_16b2170b12f56317, __wbg_stopPropagation_7647c9985222f9b0, __wbg_get_27fe3dac1c4d0224, __wbg_length_e498fbc24f9c1d4f, __wbg_new_b525de17f44a8943, __wbg_newnoargs_2b8b6bd7753c76ba, __wbg_get_baf4855f9a986186, __wbg_call_95d1ea488d03e4e8, __wbg_new_f9876326328f45ed, __wbg_self_e7c1f827057f6584, __wbg_window_a09ec664e14b1b81, __wbg_globalThis_87cbb8506fecf3a9, __wbg_global_c85a9259e621f3db, __wbindgen_is_undefined, __wbg_of_892d7838f8e4cc20, __wbg_push_49c286f04dd3bf59, __wbg_call_9495de66fdbe016b, __wbg_is_8f1618fe9a4fd388, __wbg_new_9d3a9ce4282a18a8, __wbg_resolve_fd40f858d9db1a04, __wbg_then_ec5db6d509eb475f, __wbg_buffer_cf65c07de34b9a08, __wbg_newwithbyteoffsetandlength_55f9ffb569d9fa74, __wbg_newwithbyteoffsetandlength_f477e654086cbbb6, __wbg_newwithbyteoffsetandlength_b57a602974d4b1cd, __wbg_newwithbyteoffsetandlength_9fb2f11355ecadf5, __wbg_newwithbyteoffsetandlength_9241d9d251418ebf, __wbg_newwithbyteoffsetandlength_5c5a6e21987c3bee, __wbg_newwithbyteoffsetandlength_4078d56428eb2926, __wbg_set_6aa458a4ebdb65cb, __wbindgen_debug_string, __wbindgen_throw, __wbindgen_memory, __wbindgen_closure_wrapper805, __wbindgen_closure_wrapper807, __wbindgen_closure_wrapper809, __wbindgen_closure_wrapper811, __wbindgen_closure_wrapper813, __wbindgen_closure_wrapper815, __wbindgen_closure_wrapper817, __wbindgen_closure_wrapper819, __wbindgen_closure_wrapper821, __wbindgen_closure_wrapper952, __wbindgen_closure_wrapper3709 */
+/*! exports provided: __wbg_set_wasm, EventLoopJs, WaterfallGraph, WebglGraph, WebgpuGraph, WebgpuGraphJs, __wbindgen_object_drop_ref, __wbindgen_is_array, __wbindgen_number_get, __wbindgen_string_new, __wbindgen_object_clone_ref, __wbindgen_cb_drop, __wbg_new_abda76e883ba8a5f, __wbg_stack_658279fe44541cf6, __wbg_error_f851667af71bcfc6, __wbindgen_string_get, __wbindgen_boolean_get, __wbindgen_number_new, __wbg_instanceof_WebGl2RenderingContext_61bb2cb23346dbb7, __wbg_beginQuery_fb152d8d84f2b130, __wbg_bindBufferRange_f2c529259df5358e, __wbg_bindSampler_6eb88b542e5a410f, __wbg_bindVertexArray_8b71290041cb6746, __wbg_blitFramebuffer_86eee8a5763ded5e, __wbg_bufferData_573e61c49a480c4d, __wbg_bufferData_16f948547d74c866, __wbg_bufferSubData_c7180c0b681078e8, __wbg_clearBufferfi_95daf829c568e58a, __wbg_clearBufferfv_b3c90fbed3b74920, __wbg_clearBufferiv_fe2a00a8f8fb7322, __wbg_clearBufferuiv_a41730a8d84c6ac6, __wbg_clientWaitSync_ae8f3712f85a57fb, __wbg_compressedTexSubImage2D_23b602b828848fb7, __wbg_compressedTexSubImage2D_d6c95fc640a9f4de, __wbg_compressedTexSubImage3D_00b794917e65d559, __wbg_compressedTexSubImage3D_c9c7b42e0f7db586, __wbg_copyBufferSubData_c903618a0e0a9fca, __wbg_copyTexSubImage3D_88fc9e1c56d3e7db, __wbg_createSampler_d1255ae3836b1bee, __wbg_createVertexArray_de7292bbd7ea02dd, __wbg_deleteQuery_0981fb4d492e46a7, __wbg_deleteSampler_6d832d1900eafbea, __wbg_deleteSync_f8f026807b7eee54, __wbg_deleteVertexArray_dc4f1b2e5ac93f24, __wbg_drawArraysInstanced_1222b6236d008088, __wbg_drawBuffers_3223f0aeb44f7057, __wbg_drawElementsInstanced_b4714f8dd90fd2a8, __wbg_endQuery_726967da9d5d1ca7, __wbg_fenceSync_fb3e1185847ee462, __wbg_framebufferTextureLayer_e644333b8ec36f9d, __wbg_getBufferSubData_cd8138c86821bca3, __wbg_getIndexedParameter_5f5c79f6c05edd18, __wbg_getQueryParameter_e0f43fb85f793bbe, __wbg_getSyncParameter_b2f55318719e958c, __wbg_getUniformBlockIndex_a05b0c144aa49817, __wbg_invalidateFramebuffer_696c3c456c34a207, __wbg_readBuffer_bade27c1171e00cf, __wbg_readPixels_493558abd28a3b61, __wbg_readPixels_92102ee9fe1c81a0, __wbg_renderbufferStorageMultisample_9cb173d2fd461513, __wbg_samplerParameterf_38ca759dc5c40461, __wbg_samplerParameteri_c631c02ceefc6dc1, __wbg_texStorage2D_89c29252632da923, __wbg_texStorage3D_3897fb6b91eb82d8, __wbg_texSubImage2D_6a8b0f3381d734c3, __wbg_texSubImage2D_53b6a050a0b9b24e, __wbg_texSubImage3D_84ef903e11598af0, __wbg_texSubImage3D_1d82135e9ce965bf, __wbg_uniform2fv_ffd0b1d3c3a4070a, __wbg_uniform2iv_32329f9a4d491136, __wbg_uniform3fv_bc831e48acb2c057, __wbg_uniform3iv_100a284f5a3cbca5, __wbg_uniform4fv_26d822da5c3fdb00, __wbg_uniform4iv_7f03c41e6e49bbd6, __wbg_uniformBlockBinding_1971f4528d9c3043, __wbg_uniformMatrix2fv_5f1f56c7cbfb533f, __wbg_uniformMatrix3fv_ae9271db8127a57b, __wbg_uniformMatrix4fv_0f42d678a568ded9, __wbg_vertexAttribDivisor_77f020121066a4d9, __wbg_vertexAttribIPointer_b15ad1437a268cf5, __wbg_activeTexture_0daf7c1698e49f00, __wbg_attachShader_3038234860d2d59d, __wbg_bindBuffer_9cb064991696b79f, __wbg_bindFramebuffer_0522db2a250c29f0, __wbg_bindRenderbuffer_1e4928d9bf839c02, __wbg_bindTexture_0c284b1604ba527c, __wbg_blendColor_a17ddceb3534e0b3, __wbg_blendEquation_b5d5be767bd3835a, __wbg_blendEquationSeparate_d2fa3b718ee3579f, __wbg_blendFunc_d456b0c766f8dbc9, __wbg_blendFuncSeparate_9a7146974b3cd76d, __wbg_colorMask_a7f067283ed312c9, __wbg_compileShader_af777dd3b15798b3, __wbg_copyTexSubImage2D_47b14ff8459fd4c8, __wbg_createBuffer_5ed0554ab35780b5, __wbg_createFramebuffer_86883935c13ddd59, __wbg_createProgram_7d25c1dd3bb0ce39, __wbg_createRenderbuffer_b392324e044d389a, __wbg_createShader_96339db58713e350, __wbg_createTexture_c651f9e28d1ce9d2, __wbg_cullFace_79e4ddbea13278b3, __wbg_deleteBuffer_cf67a696a7857b3f, __wbg_deleteFramebuffer_f9c2bceeb5422d9d, __wbg_deleteProgram_9c8fa1ef341cb01d, __wbg_deleteRenderbuffer_cad502ac8d1398f2, __wbg_deleteShader_f48f72524f5ee3ed, __wbg_deleteTexture_1b5f5e536e0d5545, __wbg_depthFunc_2060ec3687ac1f95, __wbg_depthMask_27d367443a80541d, __wbg_depthRange_7109c2393819a37b, __wbg_disable_3adb8645ea1d92d4, __wbg_disableVertexAttribArray_f469283fda607cee, __wbg_drawArrays_84de8a2416396807, __wbg_drawElements_dcb8df9c52e2bbd5, __wbg_enable_1ac9f14a577b7c8b, __wbg_enableVertexAttribArray_53139716d9c95dba, __wbg_framebufferRenderbuffer_77bdb2f359a5728f, __wbg_framebufferTexture2D_885176f16a153fec, __wbg_frontFace_3d7784c56ffede8a, __wbg_getActiveUniform_9c4ac7c1ccf5f894, __wbg_getExtension_f0070583175271d4, __wbg_getParameter_56d47f9b55e463d4, __wbg_getProgramInfoLog_7654794297967ac0, __wbg_getProgramParameter_5b1a40917aa850f8, __wbg_getShaderInfoLog_915d0e8506c11159, __wbg_getShaderParameter_f9240892c9e7a0a3, __wbg_getSupportedExtensions_7af8f7bbdd4d7b2c, __wbg_getUniformLocation_c6caabb349b43da7, __wbg_linkProgram_2d5cc584654696b8, __wbg_pixelStorei_a0b83efc92cd29fe, __wbg_polygonOffset_03d3955d5a1afa08, __wbg_renderbufferStorage_2192d9cd09128339, __wbg_scissor_2b084e0dc81d67f4, __wbg_shaderSource_57883245cdfb0dca, __wbg_stencilFuncSeparate_3be68afd7ca6efcc, __wbg_stencilMask_144b86d15d9fdbe6, __wbg_stencilMaskSeparate_84a2494b967772c7, __wbg_stencilOpSeparate_1708aea1aea0dc48, __wbg_texParameteri_e0ce3810261e0864, __wbg_uniform1f_dcc6951bde745417, __wbg_uniform1i_4fdc6d6740375d22, __wbg_uniform4f_19b349303edb7836, __wbg_useProgram_2f4094faf45ecba1, __wbg_vertexAttribPointer_ad370785358334f4, __wbg_viewport_cc41e28a71c23915, __wbg_instanceof_Window_e266f02eee43b570, __wbg_document_950215a728589a2d, __wbg_innerWidth_7e9d12e05bcb598e, __wbg_innerHeight_3ef25a30618357e0, __wbg_devicePixelRatio_5f8f5cab76864090, __wbg_cancelAnimationFrame_d079cdb83bc43b26, __wbg_matchMedia_967e50e4289050fa, __wbg_requestAnimationFrame_afe426b568f84138, __wbg_get_e6ae480a4b8df368, __wbg_clearTimeout_b2b8af0f044e02e9, __wbg_setTimeout_6609c9aa64f32bfc, __wbg_matches_7b5ad9e6bb56f1f3, __wbg_addListener_dfc3f9e430149b14, __wbg_removeListener_6f811d2fb59768b9, __wbg_size_5ce324b99223d189, __wbg_type_979610383a4b7c57, __wbg_name_1e6651aff4fe7a88, __wbg_drawArraysInstancedANGLE_403faa11d52ccf6d, __wbg_drawElementsInstancedANGLE_0230afc27cf9cec9, __wbg_vertexAttribDivisorANGLE_6bbb3df4c6e7d08b, __wbg_setProperty_21e2e7868b86a93e, __wbg_x_0938e87a3ff14a2e, __wbg_y_b881176a43492948, __wbg_pointerId_d2caae4465ba386f, __wbg_pressure_352c13794490720b, __wbg_pointerType_df759fa0bd6634ed, __wbg_deltaX_b7d127c94d6265c0, __wbg_deltaY_b32fa858e16edcc0, __wbg_deltaMode_11f7b19e64d9a515, __wbg_clientX_35f23f953e04ec0e, __wbg_clientY_8104e462abc0b3ec, __wbg_offsetX_413d9f02022e72ad, __wbg_offsetY_488f80a0a9666028, __wbg_ctrlKey_e1b8f1de1eb24d5d, __wbg_shiftKey_fdd99b6df96e25c5, __wbg_altKey_d531a4d3704557cb, __wbg_metaKey_934772989e28020c, __wbg_button_a1c470d5e4c997f2, __wbg_buttons_42a7b7de33d8e572, __wbg_movementX_f4d07f6658c1e16f, __wbg_movementY_30276c1f90aec4fa, __wbg_instanceof_HtmlCanvasElement_f5f69dab93281ebe, __wbg_width_a40e21a22129b197, __wbg_setwidth_81c62bc806e0a727, __wbg_height_98d51321254345a5, __wbg_setheight_98cf0db22c40ef07, __wbg_getContext_89a318b610dc5fd4, __wbg_matches_46e979ff3e4d0811, __wbg_bindVertexArrayOES_688eba003a98a0bb, __wbg_createVertexArrayOES_02cfe655604046eb, __wbg_deleteVertexArrayOES_ba22911f739464a7, __wbg_now_c644db5194be8437, __wbg_drawBuffersWEBGL_dfb0d803ea7ebe07, __wbg_fullscreenElement_65f14a4df7c25129, __wbg_createElement_e2a0e21263eb5416, __wbg_getElementById_eb93a47327bb5585, __wbg_querySelector_32b9d7ebb2df951d, __wbg_getBoundingClientRect_aaa701cbcb448965, __wbg_requestFullscreen_4eee04b9090fa98a, __wbg_setAttribute_79c9562d32d05e66, __wbg_setPointerCapture_5479dc0d082282b7, __wbg_style_2141664e428fef46, __wbg_bufferData_05664df801d7aec0, __wbg_bufferData_023700b2ed207c43, __wbg_bufferSubData_4e653f611d7a962d, __wbg_compressedTexSubImage2D_788296e97b316838, __wbg_readPixels_30de7174c15126d3, __wbg_texSubImage2D_57792696288b0a61, __wbg_uniform2fv_c29ce786946f1aae, __wbg_uniform2iv_58c3d5ee9e70c71d, __wbg_uniform3fv_5ca48b3279e0c643, __wbg_uniform3iv_0a103fe131bd9213, __wbg_uniform4fv_14f1c5ef10bfb4c9, __wbg_uniform4iv_9436eeda2a27cce8, __wbg_uniformMatrix2fv_1a40e9f63b2005c8, __wbg_uniformMatrix3fv_dcde28ba8c34d30e, __wbg_uniformMatrix4fv_4575a018c8188146, __wbg_activeTexture_01d5469eb22c10e7, __wbg_attachShader_14fb12e2ae589dc3, __wbg_bindBuffer_b7c382dcd70e33f6, __wbg_bindFramebuffer_a5ab0ed0463586cb, __wbg_bindRenderbuffer_2d67c879cdbe5ea9, __wbg_bindTexture_c1c0e00507424f8e, __wbg_blendColor_13739d87434b79c3, __wbg_blendEquation_562c3267161e4675, __wbg_blendEquationSeparate_48b95e78f7224be4, __wbg_blendFunc_f4365f78b650180f, __wbg_blendFuncSeparate_b508053691b6ebbe, __wbg_colorMask_99120a2c8caf1298, __wbg_compileShader_4e9130ccbd4a0238, __wbg_copyTexSubImage2D_7c0b0080eece3c1a, __wbg_createBuffer_8c64250e5283611c, __wbg_createFramebuffer_1f943a32c748753e, __wbg_createProgram_28db0ff3cee5f71a, __wbg_createRenderbuffer_a76dcfda7bdc749a, __wbg_createShader_c5fcd8592f47b510, __wbg_createTexture_81fd93af28301e0e, __wbg_cullFace_d4450f8718c6b3eb, __wbg_deleteBuffer_17feed38f3a70ec9, __wbg_deleteFramebuffer_130abca01c89b7d6, __wbg_deleteProgram_dd5f0e2bc555e270, __wbg_deleteRenderbuffer_385f3c9e8759b99e, __wbg_deleteShader_fac9fb3cdefdf6ec, __wbg_deleteTexture_605a36a7e380df5f, __wbg_depthFunc_00d8a905436dc681, __wbg_depthMask_134f9e3073ca4fd0, __wbg_depthRange_f34f19edea1feadd, __wbg_disable_65425605098b79cf, __wbg_disableVertexAttribArray_cf25f8beb5872364, __wbg_drawArrays_e5fa3cfc2b5d7c6d, __wbg_drawElements_a388832eba137ef0, __wbg_enable_2c3b6a4692af9b1b, __wbg_enableVertexAttribArray_6dd3d0668209ae19, __wbg_framebufferRenderbuffer_3bf1420713a0b21a, __wbg_framebufferTexture2D_ed03c0674b9979ce, __wbg_frontFace_00177185d2fae697, __wbg_getActiveUniform_e49dcda694ae15ab, __wbg_getParameter_d6cd2dd2cde656ec, __wbg_getProgramInfoLog_7fd2a7c6c1a280c1, __wbg_getProgramParameter_af1cfcccbbc80f71, __wbg_getShaderInfoLog_d057293074e59c61, __wbg_getShaderParameter_685d7d7092c6bae6, __wbg_getUniformLocation_b46e5db76599a918, __wbg_linkProgram_ca9df3fba2fd4125, __wbg_pixelStorei_f97b971917582269, __wbg_polygonOffset_fb73618b77fd3f6f, __wbg_renderbufferStorage_37eab84be1494aef, __wbg_scissor_8bc2e761846f53f0, __wbg_shaderSource_457e8bc42050401d, __wbg_stencilFuncSeparate_510d3287542b4574, __wbg_stencilMask_e1887eeaabe22771, __wbg_stencilMaskSeparate_e89abefeb5641657, __wbg_stencilOpSeparate_aa3d09aa448a6f48, __wbg_texParameteri_9fbb09bbf9670af4, __wbg_uniform1f_062c683ec584f7e8, __wbg_uniform1i_1f8256271b54cf41, __wbg_uniform4f_68fac972655f5359, __wbg_useProgram_6c9019d05fb8d280, __wbg_vertexAttribPointer_ccabef9be68fe1c4, __wbg_viewport_4bdfc4b8959593ee, __wbg_debug_8db2eed1bf6c1e2a, __wbg_error_fe807da27c4a4ced, __wbg_error_2d344a50ccf38b3b, __wbg_info_9e6db45ac337c3b5, __wbg_log_7bb108d119bafbc1, __wbg_warn_e57696dbb3977030, __wbg_addEventListener_615d4590d38da1c9, __wbg_addEventListener_cf5b03cd29763277, __wbg_removeEventListener_343e3ea9fe4c8533, __wbg_charCode_504e79c3e550d1bb, __wbg_keyCode_b33194be2ceec53b, __wbg_altKey_dff2a075455ac01b, __wbg_ctrlKey_993b558f853d64ce, __wbg_shiftKey_31e62e9d172b26f0, __wbg_metaKey_9f0f19692d0498bd, __wbg_key_f0decac219aa904b, __wbg_code_aed21120de275a12, __wbg_getModifierState_03b72700dbe33ad6, __wbg_appendChild_b8199dc1655c852d, __wbg_target_b629c177f9bee3da, __wbg_cancelBubble_c9a8182589205d54, __wbg_preventDefault_16b2170b12f56317, __wbg_stopPropagation_7647c9985222f9b0, __wbg_get_27fe3dac1c4d0224, __wbg_length_e498fbc24f9c1d4f, __wbg_new_b525de17f44a8943, __wbg_newnoargs_2b8b6bd7753c76ba, __wbg_get_baf4855f9a986186, __wbg_call_95d1ea488d03e4e8, __wbg_new_f9876326328f45ed, __wbg_self_e7c1f827057f6584, __wbg_window_a09ec664e14b1b81, __wbg_globalThis_87cbb8506fecf3a9, __wbg_global_c85a9259e621f3db, __wbindgen_is_undefined, __wbg_from_67ca20fa722467e6, __wbg_of_892d7838f8e4cc20, __wbg_push_49c286f04dd3bf59, __wbg_call_9495de66fdbe016b, __wbg_is_8f1618fe9a4fd388, __wbg_new_9d3a9ce4282a18a8, __wbg_resolve_fd40f858d9db1a04, __wbg_then_ec5db6d509eb475f, __wbg_buffer_cf65c07de34b9a08, __wbg_newwithbyteoffsetandlength_55f9ffb569d9fa74, __wbg_newwithbyteoffsetandlength_f477e654086cbbb6, __wbg_newwithbyteoffsetandlength_b57a602974d4b1cd, __wbg_newwithbyteoffsetandlength_9fb2f11355ecadf5, __wbg_newwithbyteoffsetandlength_9241d9d251418ebf, __wbg_newwithbyteoffsetandlength_5c5a6e21987c3bee, __wbg_newwithbyteoffsetandlength_4078d56428eb2926, __wbg_set_6aa458a4ebdb65cb, __wbindgen_debug_string, __wbindgen_throw, __wbindgen_memory, __wbindgen_closure_wrapper813, __wbindgen_closure_wrapper815, __wbindgen_closure_wrapper817, __wbindgen_closure_wrapper819, __wbindgen_closure_wrapper821, __wbindgen_closure_wrapper823, __wbindgen_closure_wrapper825, __wbindgen_closure_wrapper827, __wbindgen_closure_wrapper829, __wbindgen_closure_wrapper959, __wbindgen_closure_wrapper3721 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,11 +78,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_object_drop_ref", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_object_drop_ref"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_is_array", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_is_array"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_number_get", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_number_get"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_string_new", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_string_new"]; });
+
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_object_clone_ref", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_object_clone_ref"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_cb_drop", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_cb_drop"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_string_new", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_string_new"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbg_new_abda76e883ba8a5f", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbg_new_abda76e883ba8a5f"]; });
 
@@ -40,8 +97,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_string_get", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_string_get"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_boolean_get", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_boolean_get"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_number_get", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_number_get"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_number_new", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_number_new"]; });
 
@@ -649,6 +704,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_is_undefined", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_is_undefined"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbg_from_67ca20fa722467e6", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbg_from_67ca20fa722467e6"]; });
+
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbg_of_892d7838f8e4cc20", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbg_of_892d7838f8e4cc20"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbg_push_49c286f04dd3bf59", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbg_push_49c286f04dd3bf59"]; });
@@ -687,14 +744,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_memory", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_memory"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper805", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper805"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper807", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper807"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper809", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper809"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper811", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper811"]; });
-
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper813", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper813"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper815", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper815"]; });
@@ -705,9 +754,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper821", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper821"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper952", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper952"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper823", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper823"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper3709", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper3709"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper825", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper825"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper827", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper827"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper829", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper829"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper959", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper959"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper3721", function() { return _spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbindgen_closure_wrapper3721"]; });
 
 
 
@@ -721,7 +778,7 @@ Object(_spectral_graph_bg_js__WEBPACK_IMPORTED_MODULE_1__["__wbg_set_wasm"])(_sp
 /*!**********************************************************!*\
   !*** ./node_modules/spectral_graph/spectral_graph_bg.js ***!
   \**********************************************************/
-/*! exports provided: __wbg_set_wasm, EventLoopJs, WaterfallGraph, WebglGraph, WebgpuGraph, WebgpuGraphJs, __wbindgen_object_drop_ref, __wbindgen_object_clone_ref, __wbindgen_cb_drop, __wbindgen_string_new, __wbg_new_abda76e883ba8a5f, __wbg_stack_658279fe44541cf6, __wbg_error_f851667af71bcfc6, __wbindgen_string_get, __wbindgen_boolean_get, __wbindgen_number_get, __wbindgen_number_new, __wbg_instanceof_WebGl2RenderingContext_61bb2cb23346dbb7, __wbg_beginQuery_fb152d8d84f2b130, __wbg_bindBufferRange_f2c529259df5358e, __wbg_bindSampler_6eb88b542e5a410f, __wbg_bindVertexArray_8b71290041cb6746, __wbg_blitFramebuffer_86eee8a5763ded5e, __wbg_bufferData_573e61c49a480c4d, __wbg_bufferData_16f948547d74c866, __wbg_bufferSubData_c7180c0b681078e8, __wbg_clearBufferfi_95daf829c568e58a, __wbg_clearBufferfv_b3c90fbed3b74920, __wbg_clearBufferiv_fe2a00a8f8fb7322, __wbg_clearBufferuiv_a41730a8d84c6ac6, __wbg_clientWaitSync_ae8f3712f85a57fb, __wbg_compressedTexSubImage2D_23b602b828848fb7, __wbg_compressedTexSubImage2D_d6c95fc640a9f4de, __wbg_compressedTexSubImage3D_00b794917e65d559, __wbg_compressedTexSubImage3D_c9c7b42e0f7db586, __wbg_copyBufferSubData_c903618a0e0a9fca, __wbg_copyTexSubImage3D_88fc9e1c56d3e7db, __wbg_createSampler_d1255ae3836b1bee, __wbg_createVertexArray_de7292bbd7ea02dd, __wbg_deleteQuery_0981fb4d492e46a7, __wbg_deleteSampler_6d832d1900eafbea, __wbg_deleteSync_f8f026807b7eee54, __wbg_deleteVertexArray_dc4f1b2e5ac93f24, __wbg_drawArraysInstanced_1222b6236d008088, __wbg_drawBuffers_3223f0aeb44f7057, __wbg_drawElementsInstanced_b4714f8dd90fd2a8, __wbg_endQuery_726967da9d5d1ca7, __wbg_fenceSync_fb3e1185847ee462, __wbg_framebufferTextureLayer_e644333b8ec36f9d, __wbg_getBufferSubData_cd8138c86821bca3, __wbg_getIndexedParameter_5f5c79f6c05edd18, __wbg_getQueryParameter_e0f43fb85f793bbe, __wbg_getSyncParameter_b2f55318719e958c, __wbg_getUniformBlockIndex_a05b0c144aa49817, __wbg_invalidateFramebuffer_696c3c456c34a207, __wbg_readBuffer_bade27c1171e00cf, __wbg_readPixels_493558abd28a3b61, __wbg_readPixels_92102ee9fe1c81a0, __wbg_renderbufferStorageMultisample_9cb173d2fd461513, __wbg_samplerParameterf_38ca759dc5c40461, __wbg_samplerParameteri_c631c02ceefc6dc1, __wbg_texStorage2D_89c29252632da923, __wbg_texStorage3D_3897fb6b91eb82d8, __wbg_texSubImage2D_6a8b0f3381d734c3, __wbg_texSubImage2D_53b6a050a0b9b24e, __wbg_texSubImage3D_84ef903e11598af0, __wbg_texSubImage3D_1d82135e9ce965bf, __wbg_uniform2fv_ffd0b1d3c3a4070a, __wbg_uniform2iv_32329f9a4d491136, __wbg_uniform3fv_bc831e48acb2c057, __wbg_uniform3iv_100a284f5a3cbca5, __wbg_uniform4fv_26d822da5c3fdb00, __wbg_uniform4iv_7f03c41e6e49bbd6, __wbg_uniformBlockBinding_1971f4528d9c3043, __wbg_uniformMatrix2fv_5f1f56c7cbfb533f, __wbg_uniformMatrix3fv_ae9271db8127a57b, __wbg_uniformMatrix4fv_0f42d678a568ded9, __wbg_vertexAttribDivisor_77f020121066a4d9, __wbg_vertexAttribIPointer_b15ad1437a268cf5, __wbg_activeTexture_0daf7c1698e49f00, __wbg_attachShader_3038234860d2d59d, __wbg_bindBuffer_9cb064991696b79f, __wbg_bindFramebuffer_0522db2a250c29f0, __wbg_bindRenderbuffer_1e4928d9bf839c02, __wbg_bindTexture_0c284b1604ba527c, __wbg_blendColor_a17ddceb3534e0b3, __wbg_blendEquation_b5d5be767bd3835a, __wbg_blendEquationSeparate_d2fa3b718ee3579f, __wbg_blendFunc_d456b0c766f8dbc9, __wbg_blendFuncSeparate_9a7146974b3cd76d, __wbg_colorMask_a7f067283ed312c9, __wbg_compileShader_af777dd3b15798b3, __wbg_copyTexSubImage2D_47b14ff8459fd4c8, __wbg_createBuffer_5ed0554ab35780b5, __wbg_createFramebuffer_86883935c13ddd59, __wbg_createProgram_7d25c1dd3bb0ce39, __wbg_createRenderbuffer_b392324e044d389a, __wbg_createShader_96339db58713e350, __wbg_createTexture_c651f9e28d1ce9d2, __wbg_cullFace_79e4ddbea13278b3, __wbg_deleteBuffer_cf67a696a7857b3f, __wbg_deleteFramebuffer_f9c2bceeb5422d9d, __wbg_deleteProgram_9c8fa1ef341cb01d, __wbg_deleteRenderbuffer_cad502ac8d1398f2, __wbg_deleteShader_f48f72524f5ee3ed, __wbg_deleteTexture_1b5f5e536e0d5545, __wbg_depthFunc_2060ec3687ac1f95, __wbg_depthMask_27d367443a80541d, __wbg_depthRange_7109c2393819a37b, __wbg_disable_3adb8645ea1d92d4, __wbg_disableVertexAttribArray_f469283fda607cee, __wbg_drawArrays_84de8a2416396807, __wbg_drawElements_dcb8df9c52e2bbd5, __wbg_enable_1ac9f14a577b7c8b, __wbg_enableVertexAttribArray_53139716d9c95dba, __wbg_framebufferRenderbuffer_77bdb2f359a5728f, __wbg_framebufferTexture2D_885176f16a153fec, __wbg_frontFace_3d7784c56ffede8a, __wbg_getActiveUniform_9c4ac7c1ccf5f894, __wbg_getExtension_f0070583175271d4, __wbg_getParameter_56d47f9b55e463d4, __wbg_getProgramInfoLog_7654794297967ac0, __wbg_getProgramParameter_5b1a40917aa850f8, __wbg_getShaderInfoLog_915d0e8506c11159, __wbg_getShaderParameter_f9240892c9e7a0a3, __wbg_getSupportedExtensions_7af8f7bbdd4d7b2c, __wbg_getUniformLocation_c6caabb349b43da7, __wbg_linkProgram_2d5cc584654696b8, __wbg_pixelStorei_a0b83efc92cd29fe, __wbg_polygonOffset_03d3955d5a1afa08, __wbg_renderbufferStorage_2192d9cd09128339, __wbg_scissor_2b084e0dc81d67f4, __wbg_shaderSource_57883245cdfb0dca, __wbg_stencilFuncSeparate_3be68afd7ca6efcc, __wbg_stencilMask_144b86d15d9fdbe6, __wbg_stencilMaskSeparate_84a2494b967772c7, __wbg_stencilOpSeparate_1708aea1aea0dc48, __wbg_texParameteri_e0ce3810261e0864, __wbg_uniform1f_dcc6951bde745417, __wbg_uniform1i_4fdc6d6740375d22, __wbg_uniform4f_19b349303edb7836, __wbg_useProgram_2f4094faf45ecba1, __wbg_vertexAttribPointer_ad370785358334f4, __wbg_viewport_cc41e28a71c23915, __wbg_instanceof_Window_e266f02eee43b570, __wbg_document_950215a728589a2d, __wbg_innerWidth_7e9d12e05bcb598e, __wbg_innerHeight_3ef25a30618357e0, __wbg_devicePixelRatio_5f8f5cab76864090, __wbg_cancelAnimationFrame_d079cdb83bc43b26, __wbg_matchMedia_967e50e4289050fa, __wbg_requestAnimationFrame_afe426b568f84138, __wbg_get_e6ae480a4b8df368, __wbg_clearTimeout_b2b8af0f044e02e9, __wbg_setTimeout_6609c9aa64f32bfc, __wbg_matches_7b5ad9e6bb56f1f3, __wbg_addListener_dfc3f9e430149b14, __wbg_removeListener_6f811d2fb59768b9, __wbg_size_5ce324b99223d189, __wbg_type_979610383a4b7c57, __wbg_name_1e6651aff4fe7a88, __wbg_drawArraysInstancedANGLE_403faa11d52ccf6d, __wbg_drawElementsInstancedANGLE_0230afc27cf9cec9, __wbg_vertexAttribDivisorANGLE_6bbb3df4c6e7d08b, __wbg_setProperty_21e2e7868b86a93e, __wbg_x_0938e87a3ff14a2e, __wbg_y_b881176a43492948, __wbg_pointerId_d2caae4465ba386f, __wbg_pressure_352c13794490720b, __wbg_pointerType_df759fa0bd6634ed, __wbg_deltaX_b7d127c94d6265c0, __wbg_deltaY_b32fa858e16edcc0, __wbg_deltaMode_11f7b19e64d9a515, __wbg_clientX_35f23f953e04ec0e, __wbg_clientY_8104e462abc0b3ec, __wbg_offsetX_413d9f02022e72ad, __wbg_offsetY_488f80a0a9666028, __wbg_ctrlKey_e1b8f1de1eb24d5d, __wbg_shiftKey_fdd99b6df96e25c5, __wbg_altKey_d531a4d3704557cb, __wbg_metaKey_934772989e28020c, __wbg_button_a1c470d5e4c997f2, __wbg_buttons_42a7b7de33d8e572, __wbg_movementX_f4d07f6658c1e16f, __wbg_movementY_30276c1f90aec4fa, __wbg_instanceof_HtmlCanvasElement_f5f69dab93281ebe, __wbg_width_a40e21a22129b197, __wbg_setwidth_81c62bc806e0a727, __wbg_height_98d51321254345a5, __wbg_setheight_98cf0db22c40ef07, __wbg_getContext_89a318b610dc5fd4, __wbg_matches_46e979ff3e4d0811, __wbg_bindVertexArrayOES_688eba003a98a0bb, __wbg_createVertexArrayOES_02cfe655604046eb, __wbg_deleteVertexArrayOES_ba22911f739464a7, __wbg_now_c644db5194be8437, __wbg_drawBuffersWEBGL_dfb0d803ea7ebe07, __wbg_fullscreenElement_65f14a4df7c25129, __wbg_createElement_e2a0e21263eb5416, __wbg_getElementById_eb93a47327bb5585, __wbg_querySelector_32b9d7ebb2df951d, __wbg_getBoundingClientRect_aaa701cbcb448965, __wbg_requestFullscreen_4eee04b9090fa98a, __wbg_setAttribute_79c9562d32d05e66, __wbg_setPointerCapture_5479dc0d082282b7, __wbg_style_2141664e428fef46, __wbg_bufferData_05664df801d7aec0, __wbg_bufferData_023700b2ed207c43, __wbg_bufferSubData_4e653f611d7a962d, __wbg_compressedTexSubImage2D_788296e97b316838, __wbg_readPixels_30de7174c15126d3, __wbg_texSubImage2D_57792696288b0a61, __wbg_uniform2fv_c29ce786946f1aae, __wbg_uniform2iv_58c3d5ee9e70c71d, __wbg_uniform3fv_5ca48b3279e0c643, __wbg_uniform3iv_0a103fe131bd9213, __wbg_uniform4fv_14f1c5ef10bfb4c9, __wbg_uniform4iv_9436eeda2a27cce8, __wbg_uniformMatrix2fv_1a40e9f63b2005c8, __wbg_uniformMatrix3fv_dcde28ba8c34d30e, __wbg_uniformMatrix4fv_4575a018c8188146, __wbg_activeTexture_01d5469eb22c10e7, __wbg_attachShader_14fb12e2ae589dc3, __wbg_bindBuffer_b7c382dcd70e33f6, __wbg_bindFramebuffer_a5ab0ed0463586cb, __wbg_bindRenderbuffer_2d67c879cdbe5ea9, __wbg_bindTexture_c1c0e00507424f8e, __wbg_blendColor_13739d87434b79c3, __wbg_blendEquation_562c3267161e4675, __wbg_blendEquationSeparate_48b95e78f7224be4, __wbg_blendFunc_f4365f78b650180f, __wbg_blendFuncSeparate_b508053691b6ebbe, __wbg_colorMask_99120a2c8caf1298, __wbg_compileShader_4e9130ccbd4a0238, __wbg_copyTexSubImage2D_7c0b0080eece3c1a, __wbg_createBuffer_8c64250e5283611c, __wbg_createFramebuffer_1f943a32c748753e, __wbg_createProgram_28db0ff3cee5f71a, __wbg_createRenderbuffer_a76dcfda7bdc749a, __wbg_createShader_c5fcd8592f47b510, __wbg_createTexture_81fd93af28301e0e, __wbg_cullFace_d4450f8718c6b3eb, __wbg_deleteBuffer_17feed38f3a70ec9, __wbg_deleteFramebuffer_130abca01c89b7d6, __wbg_deleteProgram_dd5f0e2bc555e270, __wbg_deleteRenderbuffer_385f3c9e8759b99e, __wbg_deleteShader_fac9fb3cdefdf6ec, __wbg_deleteTexture_605a36a7e380df5f, __wbg_depthFunc_00d8a905436dc681, __wbg_depthMask_134f9e3073ca4fd0, __wbg_depthRange_f34f19edea1feadd, __wbg_disable_65425605098b79cf, __wbg_disableVertexAttribArray_cf25f8beb5872364, __wbg_drawArrays_e5fa3cfc2b5d7c6d, __wbg_drawElements_a388832eba137ef0, __wbg_enable_2c3b6a4692af9b1b, __wbg_enableVertexAttribArray_6dd3d0668209ae19, __wbg_framebufferRenderbuffer_3bf1420713a0b21a, __wbg_framebufferTexture2D_ed03c0674b9979ce, __wbg_frontFace_00177185d2fae697, __wbg_getActiveUniform_e49dcda694ae15ab, __wbg_getParameter_d6cd2dd2cde656ec, __wbg_getProgramInfoLog_7fd2a7c6c1a280c1, __wbg_getProgramParameter_af1cfcccbbc80f71, __wbg_getShaderInfoLog_d057293074e59c61, __wbg_getShaderParameter_685d7d7092c6bae6, __wbg_getUniformLocation_b46e5db76599a918, __wbg_linkProgram_ca9df3fba2fd4125, __wbg_pixelStorei_f97b971917582269, __wbg_polygonOffset_fb73618b77fd3f6f, __wbg_renderbufferStorage_37eab84be1494aef, __wbg_scissor_8bc2e761846f53f0, __wbg_shaderSource_457e8bc42050401d, __wbg_stencilFuncSeparate_510d3287542b4574, __wbg_stencilMask_e1887eeaabe22771, __wbg_stencilMaskSeparate_e89abefeb5641657, __wbg_stencilOpSeparate_aa3d09aa448a6f48, __wbg_texParameteri_9fbb09bbf9670af4, __wbg_uniform1f_062c683ec584f7e8, __wbg_uniform1i_1f8256271b54cf41, __wbg_uniform4f_68fac972655f5359, __wbg_useProgram_6c9019d05fb8d280, __wbg_vertexAttribPointer_ccabef9be68fe1c4, __wbg_viewport_4bdfc4b8959593ee, __wbg_debug_8db2eed1bf6c1e2a, __wbg_error_fe807da27c4a4ced, __wbg_error_2d344a50ccf38b3b, __wbg_info_9e6db45ac337c3b5, __wbg_log_7bb108d119bafbc1, __wbg_warn_e57696dbb3977030, __wbg_addEventListener_615d4590d38da1c9, __wbg_addEventListener_cf5b03cd29763277, __wbg_removeEventListener_343e3ea9fe4c8533, __wbg_charCode_504e79c3e550d1bb, __wbg_keyCode_b33194be2ceec53b, __wbg_altKey_dff2a075455ac01b, __wbg_ctrlKey_993b558f853d64ce, __wbg_shiftKey_31e62e9d172b26f0, __wbg_metaKey_9f0f19692d0498bd, __wbg_key_f0decac219aa904b, __wbg_code_aed21120de275a12, __wbg_getModifierState_03b72700dbe33ad6, __wbg_appendChild_b8199dc1655c852d, __wbg_target_b629c177f9bee3da, __wbg_cancelBubble_c9a8182589205d54, __wbg_preventDefault_16b2170b12f56317, __wbg_stopPropagation_7647c9985222f9b0, __wbg_get_27fe3dac1c4d0224, __wbg_length_e498fbc24f9c1d4f, __wbg_new_b525de17f44a8943, __wbg_newnoargs_2b8b6bd7753c76ba, __wbg_get_baf4855f9a986186, __wbg_call_95d1ea488d03e4e8, __wbg_new_f9876326328f45ed, __wbg_self_e7c1f827057f6584, __wbg_window_a09ec664e14b1b81, __wbg_globalThis_87cbb8506fecf3a9, __wbg_global_c85a9259e621f3db, __wbindgen_is_undefined, __wbg_of_892d7838f8e4cc20, __wbg_push_49c286f04dd3bf59, __wbg_call_9495de66fdbe016b, __wbg_is_8f1618fe9a4fd388, __wbg_new_9d3a9ce4282a18a8, __wbg_resolve_fd40f858d9db1a04, __wbg_then_ec5db6d509eb475f, __wbg_buffer_cf65c07de34b9a08, __wbg_newwithbyteoffsetandlength_55f9ffb569d9fa74, __wbg_newwithbyteoffsetandlength_f477e654086cbbb6, __wbg_newwithbyteoffsetandlength_b57a602974d4b1cd, __wbg_newwithbyteoffsetandlength_9fb2f11355ecadf5, __wbg_newwithbyteoffsetandlength_9241d9d251418ebf, __wbg_newwithbyteoffsetandlength_5c5a6e21987c3bee, __wbg_newwithbyteoffsetandlength_4078d56428eb2926, __wbg_set_6aa458a4ebdb65cb, __wbindgen_debug_string, __wbindgen_throw, __wbindgen_memory, __wbindgen_closure_wrapper805, __wbindgen_closure_wrapper807, __wbindgen_closure_wrapper809, __wbindgen_closure_wrapper811, __wbindgen_closure_wrapper813, __wbindgen_closure_wrapper815, __wbindgen_closure_wrapper817, __wbindgen_closure_wrapper819, __wbindgen_closure_wrapper821, __wbindgen_closure_wrapper952, __wbindgen_closure_wrapper3709 */
+/*! exports provided: __wbg_set_wasm, EventLoopJs, WaterfallGraph, WebglGraph, WebgpuGraph, WebgpuGraphJs, __wbindgen_object_drop_ref, __wbindgen_is_array, __wbindgen_number_get, __wbindgen_string_new, __wbindgen_object_clone_ref, __wbindgen_cb_drop, __wbg_new_abda76e883ba8a5f, __wbg_stack_658279fe44541cf6, __wbg_error_f851667af71bcfc6, __wbindgen_string_get, __wbindgen_boolean_get, __wbindgen_number_new, __wbg_instanceof_WebGl2RenderingContext_61bb2cb23346dbb7, __wbg_beginQuery_fb152d8d84f2b130, __wbg_bindBufferRange_f2c529259df5358e, __wbg_bindSampler_6eb88b542e5a410f, __wbg_bindVertexArray_8b71290041cb6746, __wbg_blitFramebuffer_86eee8a5763ded5e, __wbg_bufferData_573e61c49a480c4d, __wbg_bufferData_16f948547d74c866, __wbg_bufferSubData_c7180c0b681078e8, __wbg_clearBufferfi_95daf829c568e58a, __wbg_clearBufferfv_b3c90fbed3b74920, __wbg_clearBufferiv_fe2a00a8f8fb7322, __wbg_clearBufferuiv_a41730a8d84c6ac6, __wbg_clientWaitSync_ae8f3712f85a57fb, __wbg_compressedTexSubImage2D_23b602b828848fb7, __wbg_compressedTexSubImage2D_d6c95fc640a9f4de, __wbg_compressedTexSubImage3D_00b794917e65d559, __wbg_compressedTexSubImage3D_c9c7b42e0f7db586, __wbg_copyBufferSubData_c903618a0e0a9fca, __wbg_copyTexSubImage3D_88fc9e1c56d3e7db, __wbg_createSampler_d1255ae3836b1bee, __wbg_createVertexArray_de7292bbd7ea02dd, __wbg_deleteQuery_0981fb4d492e46a7, __wbg_deleteSampler_6d832d1900eafbea, __wbg_deleteSync_f8f026807b7eee54, __wbg_deleteVertexArray_dc4f1b2e5ac93f24, __wbg_drawArraysInstanced_1222b6236d008088, __wbg_drawBuffers_3223f0aeb44f7057, __wbg_drawElementsInstanced_b4714f8dd90fd2a8, __wbg_endQuery_726967da9d5d1ca7, __wbg_fenceSync_fb3e1185847ee462, __wbg_framebufferTextureLayer_e644333b8ec36f9d, __wbg_getBufferSubData_cd8138c86821bca3, __wbg_getIndexedParameter_5f5c79f6c05edd18, __wbg_getQueryParameter_e0f43fb85f793bbe, __wbg_getSyncParameter_b2f55318719e958c, __wbg_getUniformBlockIndex_a05b0c144aa49817, __wbg_invalidateFramebuffer_696c3c456c34a207, __wbg_readBuffer_bade27c1171e00cf, __wbg_readPixels_493558abd28a3b61, __wbg_readPixels_92102ee9fe1c81a0, __wbg_renderbufferStorageMultisample_9cb173d2fd461513, __wbg_samplerParameterf_38ca759dc5c40461, __wbg_samplerParameteri_c631c02ceefc6dc1, __wbg_texStorage2D_89c29252632da923, __wbg_texStorage3D_3897fb6b91eb82d8, __wbg_texSubImage2D_6a8b0f3381d734c3, __wbg_texSubImage2D_53b6a050a0b9b24e, __wbg_texSubImage3D_84ef903e11598af0, __wbg_texSubImage3D_1d82135e9ce965bf, __wbg_uniform2fv_ffd0b1d3c3a4070a, __wbg_uniform2iv_32329f9a4d491136, __wbg_uniform3fv_bc831e48acb2c057, __wbg_uniform3iv_100a284f5a3cbca5, __wbg_uniform4fv_26d822da5c3fdb00, __wbg_uniform4iv_7f03c41e6e49bbd6, __wbg_uniformBlockBinding_1971f4528d9c3043, __wbg_uniformMatrix2fv_5f1f56c7cbfb533f, __wbg_uniformMatrix3fv_ae9271db8127a57b, __wbg_uniformMatrix4fv_0f42d678a568ded9, __wbg_vertexAttribDivisor_77f020121066a4d9, __wbg_vertexAttribIPointer_b15ad1437a268cf5, __wbg_activeTexture_0daf7c1698e49f00, __wbg_attachShader_3038234860d2d59d, __wbg_bindBuffer_9cb064991696b79f, __wbg_bindFramebuffer_0522db2a250c29f0, __wbg_bindRenderbuffer_1e4928d9bf839c02, __wbg_bindTexture_0c284b1604ba527c, __wbg_blendColor_a17ddceb3534e0b3, __wbg_blendEquation_b5d5be767bd3835a, __wbg_blendEquationSeparate_d2fa3b718ee3579f, __wbg_blendFunc_d456b0c766f8dbc9, __wbg_blendFuncSeparate_9a7146974b3cd76d, __wbg_colorMask_a7f067283ed312c9, __wbg_compileShader_af777dd3b15798b3, __wbg_copyTexSubImage2D_47b14ff8459fd4c8, __wbg_createBuffer_5ed0554ab35780b5, __wbg_createFramebuffer_86883935c13ddd59, __wbg_createProgram_7d25c1dd3bb0ce39, __wbg_createRenderbuffer_b392324e044d389a, __wbg_createShader_96339db58713e350, __wbg_createTexture_c651f9e28d1ce9d2, __wbg_cullFace_79e4ddbea13278b3, __wbg_deleteBuffer_cf67a696a7857b3f, __wbg_deleteFramebuffer_f9c2bceeb5422d9d, __wbg_deleteProgram_9c8fa1ef341cb01d, __wbg_deleteRenderbuffer_cad502ac8d1398f2, __wbg_deleteShader_f48f72524f5ee3ed, __wbg_deleteTexture_1b5f5e536e0d5545, __wbg_depthFunc_2060ec3687ac1f95, __wbg_depthMask_27d367443a80541d, __wbg_depthRange_7109c2393819a37b, __wbg_disable_3adb8645ea1d92d4, __wbg_disableVertexAttribArray_f469283fda607cee, __wbg_drawArrays_84de8a2416396807, __wbg_drawElements_dcb8df9c52e2bbd5, __wbg_enable_1ac9f14a577b7c8b, __wbg_enableVertexAttribArray_53139716d9c95dba, __wbg_framebufferRenderbuffer_77bdb2f359a5728f, __wbg_framebufferTexture2D_885176f16a153fec, __wbg_frontFace_3d7784c56ffede8a, __wbg_getActiveUniform_9c4ac7c1ccf5f894, __wbg_getExtension_f0070583175271d4, __wbg_getParameter_56d47f9b55e463d4, __wbg_getProgramInfoLog_7654794297967ac0, __wbg_getProgramParameter_5b1a40917aa850f8, __wbg_getShaderInfoLog_915d0e8506c11159, __wbg_getShaderParameter_f9240892c9e7a0a3, __wbg_getSupportedExtensions_7af8f7bbdd4d7b2c, __wbg_getUniformLocation_c6caabb349b43da7, __wbg_linkProgram_2d5cc584654696b8, __wbg_pixelStorei_a0b83efc92cd29fe, __wbg_polygonOffset_03d3955d5a1afa08, __wbg_renderbufferStorage_2192d9cd09128339, __wbg_scissor_2b084e0dc81d67f4, __wbg_shaderSource_57883245cdfb0dca, __wbg_stencilFuncSeparate_3be68afd7ca6efcc, __wbg_stencilMask_144b86d15d9fdbe6, __wbg_stencilMaskSeparate_84a2494b967772c7, __wbg_stencilOpSeparate_1708aea1aea0dc48, __wbg_texParameteri_e0ce3810261e0864, __wbg_uniform1f_dcc6951bde745417, __wbg_uniform1i_4fdc6d6740375d22, __wbg_uniform4f_19b349303edb7836, __wbg_useProgram_2f4094faf45ecba1, __wbg_vertexAttribPointer_ad370785358334f4, __wbg_viewport_cc41e28a71c23915, __wbg_instanceof_Window_e266f02eee43b570, __wbg_document_950215a728589a2d, __wbg_innerWidth_7e9d12e05bcb598e, __wbg_innerHeight_3ef25a30618357e0, __wbg_devicePixelRatio_5f8f5cab76864090, __wbg_cancelAnimationFrame_d079cdb83bc43b26, __wbg_matchMedia_967e50e4289050fa, __wbg_requestAnimationFrame_afe426b568f84138, __wbg_get_e6ae480a4b8df368, __wbg_clearTimeout_b2b8af0f044e02e9, __wbg_setTimeout_6609c9aa64f32bfc, __wbg_matches_7b5ad9e6bb56f1f3, __wbg_addListener_dfc3f9e430149b14, __wbg_removeListener_6f811d2fb59768b9, __wbg_size_5ce324b99223d189, __wbg_type_979610383a4b7c57, __wbg_name_1e6651aff4fe7a88, __wbg_drawArraysInstancedANGLE_403faa11d52ccf6d, __wbg_drawElementsInstancedANGLE_0230afc27cf9cec9, __wbg_vertexAttribDivisorANGLE_6bbb3df4c6e7d08b, __wbg_setProperty_21e2e7868b86a93e, __wbg_x_0938e87a3ff14a2e, __wbg_y_b881176a43492948, __wbg_pointerId_d2caae4465ba386f, __wbg_pressure_352c13794490720b, __wbg_pointerType_df759fa0bd6634ed, __wbg_deltaX_b7d127c94d6265c0, __wbg_deltaY_b32fa858e16edcc0, __wbg_deltaMode_11f7b19e64d9a515, __wbg_clientX_35f23f953e04ec0e, __wbg_clientY_8104e462abc0b3ec, __wbg_offsetX_413d9f02022e72ad, __wbg_offsetY_488f80a0a9666028, __wbg_ctrlKey_e1b8f1de1eb24d5d, __wbg_shiftKey_fdd99b6df96e25c5, __wbg_altKey_d531a4d3704557cb, __wbg_metaKey_934772989e28020c, __wbg_button_a1c470d5e4c997f2, __wbg_buttons_42a7b7de33d8e572, __wbg_movementX_f4d07f6658c1e16f, __wbg_movementY_30276c1f90aec4fa, __wbg_instanceof_HtmlCanvasElement_f5f69dab93281ebe, __wbg_width_a40e21a22129b197, __wbg_setwidth_81c62bc806e0a727, __wbg_height_98d51321254345a5, __wbg_setheight_98cf0db22c40ef07, __wbg_getContext_89a318b610dc5fd4, __wbg_matches_46e979ff3e4d0811, __wbg_bindVertexArrayOES_688eba003a98a0bb, __wbg_createVertexArrayOES_02cfe655604046eb, __wbg_deleteVertexArrayOES_ba22911f739464a7, __wbg_now_c644db5194be8437, __wbg_drawBuffersWEBGL_dfb0d803ea7ebe07, __wbg_fullscreenElement_65f14a4df7c25129, __wbg_createElement_e2a0e21263eb5416, __wbg_getElementById_eb93a47327bb5585, __wbg_querySelector_32b9d7ebb2df951d, __wbg_getBoundingClientRect_aaa701cbcb448965, __wbg_requestFullscreen_4eee04b9090fa98a, __wbg_setAttribute_79c9562d32d05e66, __wbg_setPointerCapture_5479dc0d082282b7, __wbg_style_2141664e428fef46, __wbg_bufferData_05664df801d7aec0, __wbg_bufferData_023700b2ed207c43, __wbg_bufferSubData_4e653f611d7a962d, __wbg_compressedTexSubImage2D_788296e97b316838, __wbg_readPixels_30de7174c15126d3, __wbg_texSubImage2D_57792696288b0a61, __wbg_uniform2fv_c29ce786946f1aae, __wbg_uniform2iv_58c3d5ee9e70c71d, __wbg_uniform3fv_5ca48b3279e0c643, __wbg_uniform3iv_0a103fe131bd9213, __wbg_uniform4fv_14f1c5ef10bfb4c9, __wbg_uniform4iv_9436eeda2a27cce8, __wbg_uniformMatrix2fv_1a40e9f63b2005c8, __wbg_uniformMatrix3fv_dcde28ba8c34d30e, __wbg_uniformMatrix4fv_4575a018c8188146, __wbg_activeTexture_01d5469eb22c10e7, __wbg_attachShader_14fb12e2ae589dc3, __wbg_bindBuffer_b7c382dcd70e33f6, __wbg_bindFramebuffer_a5ab0ed0463586cb, __wbg_bindRenderbuffer_2d67c879cdbe5ea9, __wbg_bindTexture_c1c0e00507424f8e, __wbg_blendColor_13739d87434b79c3, __wbg_blendEquation_562c3267161e4675, __wbg_blendEquationSeparate_48b95e78f7224be4, __wbg_blendFunc_f4365f78b650180f, __wbg_blendFuncSeparate_b508053691b6ebbe, __wbg_colorMask_99120a2c8caf1298, __wbg_compileShader_4e9130ccbd4a0238, __wbg_copyTexSubImage2D_7c0b0080eece3c1a, __wbg_createBuffer_8c64250e5283611c, __wbg_createFramebuffer_1f943a32c748753e, __wbg_createProgram_28db0ff3cee5f71a, __wbg_createRenderbuffer_a76dcfda7bdc749a, __wbg_createShader_c5fcd8592f47b510, __wbg_createTexture_81fd93af28301e0e, __wbg_cullFace_d4450f8718c6b3eb, __wbg_deleteBuffer_17feed38f3a70ec9, __wbg_deleteFramebuffer_130abca01c89b7d6, __wbg_deleteProgram_dd5f0e2bc555e270, __wbg_deleteRenderbuffer_385f3c9e8759b99e, __wbg_deleteShader_fac9fb3cdefdf6ec, __wbg_deleteTexture_605a36a7e380df5f, __wbg_depthFunc_00d8a905436dc681, __wbg_depthMask_134f9e3073ca4fd0, __wbg_depthRange_f34f19edea1feadd, __wbg_disable_65425605098b79cf, __wbg_disableVertexAttribArray_cf25f8beb5872364, __wbg_drawArrays_e5fa3cfc2b5d7c6d, __wbg_drawElements_a388832eba137ef0, __wbg_enable_2c3b6a4692af9b1b, __wbg_enableVertexAttribArray_6dd3d0668209ae19, __wbg_framebufferRenderbuffer_3bf1420713a0b21a, __wbg_framebufferTexture2D_ed03c0674b9979ce, __wbg_frontFace_00177185d2fae697, __wbg_getActiveUniform_e49dcda694ae15ab, __wbg_getParameter_d6cd2dd2cde656ec, __wbg_getProgramInfoLog_7fd2a7c6c1a280c1, __wbg_getProgramParameter_af1cfcccbbc80f71, __wbg_getShaderInfoLog_d057293074e59c61, __wbg_getShaderParameter_685d7d7092c6bae6, __wbg_getUniformLocation_b46e5db76599a918, __wbg_linkProgram_ca9df3fba2fd4125, __wbg_pixelStorei_f97b971917582269, __wbg_polygonOffset_fb73618b77fd3f6f, __wbg_renderbufferStorage_37eab84be1494aef, __wbg_scissor_8bc2e761846f53f0, __wbg_shaderSource_457e8bc42050401d, __wbg_stencilFuncSeparate_510d3287542b4574, __wbg_stencilMask_e1887eeaabe22771, __wbg_stencilMaskSeparate_e89abefeb5641657, __wbg_stencilOpSeparate_aa3d09aa448a6f48, __wbg_texParameteri_9fbb09bbf9670af4, __wbg_uniform1f_062c683ec584f7e8, __wbg_uniform1i_1f8256271b54cf41, __wbg_uniform4f_68fac972655f5359, __wbg_useProgram_6c9019d05fb8d280, __wbg_vertexAttribPointer_ccabef9be68fe1c4, __wbg_viewport_4bdfc4b8959593ee, __wbg_debug_8db2eed1bf6c1e2a, __wbg_error_fe807da27c4a4ced, __wbg_error_2d344a50ccf38b3b, __wbg_info_9e6db45ac337c3b5, __wbg_log_7bb108d119bafbc1, __wbg_warn_e57696dbb3977030, __wbg_addEventListener_615d4590d38da1c9, __wbg_addEventListener_cf5b03cd29763277, __wbg_removeEventListener_343e3ea9fe4c8533, __wbg_charCode_504e79c3e550d1bb, __wbg_keyCode_b33194be2ceec53b, __wbg_altKey_dff2a075455ac01b, __wbg_ctrlKey_993b558f853d64ce, __wbg_shiftKey_31e62e9d172b26f0, __wbg_metaKey_9f0f19692d0498bd, __wbg_key_f0decac219aa904b, __wbg_code_aed21120de275a12, __wbg_getModifierState_03b72700dbe33ad6, __wbg_appendChild_b8199dc1655c852d, __wbg_target_b629c177f9bee3da, __wbg_cancelBubble_c9a8182589205d54, __wbg_preventDefault_16b2170b12f56317, __wbg_stopPropagation_7647c9985222f9b0, __wbg_get_27fe3dac1c4d0224, __wbg_length_e498fbc24f9c1d4f, __wbg_new_b525de17f44a8943, __wbg_newnoargs_2b8b6bd7753c76ba, __wbg_get_baf4855f9a986186, __wbg_call_95d1ea488d03e4e8, __wbg_new_f9876326328f45ed, __wbg_self_e7c1f827057f6584, __wbg_window_a09ec664e14b1b81, __wbg_globalThis_87cbb8506fecf3a9, __wbg_global_c85a9259e621f3db, __wbindgen_is_undefined, __wbg_from_67ca20fa722467e6, __wbg_of_892d7838f8e4cc20, __wbg_push_49c286f04dd3bf59, __wbg_call_9495de66fdbe016b, __wbg_is_8f1618fe9a4fd388, __wbg_new_9d3a9ce4282a18a8, __wbg_resolve_fd40f858d9db1a04, __wbg_then_ec5db6d509eb475f, __wbg_buffer_cf65c07de34b9a08, __wbg_newwithbyteoffsetandlength_55f9ffb569d9fa74, __wbg_newwithbyteoffsetandlength_f477e654086cbbb6, __wbg_newwithbyteoffsetandlength_b57a602974d4b1cd, __wbg_newwithbyteoffsetandlength_9fb2f11355ecadf5, __wbg_newwithbyteoffsetandlength_9241d9d251418ebf, __wbg_newwithbyteoffsetandlength_5c5a6e21987c3bee, __wbg_newwithbyteoffsetandlength_4078d56428eb2926, __wbg_set_6aa458a4ebdb65cb, __wbindgen_debug_string, __wbindgen_throw, __wbindgen_memory, __wbindgen_closure_wrapper813, __wbindgen_closure_wrapper815, __wbindgen_closure_wrapper817, __wbindgen_closure_wrapper819, __wbindgen_closure_wrapper821, __wbindgen_closure_wrapper823, __wbindgen_closure_wrapper825, __wbindgen_closure_wrapper827, __wbindgen_closure_wrapper829, __wbindgen_closure_wrapper959, __wbindgen_closure_wrapper3721 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -733,15 +790,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebgpuGraph", function() { return WebgpuGraph; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebgpuGraphJs", function() { return WebgpuGraphJs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_object_drop_ref", function() { return __wbindgen_object_drop_ref; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_is_array", function() { return __wbindgen_is_array; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_number_get", function() { return __wbindgen_number_get; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_string_new", function() { return __wbindgen_string_new; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_object_clone_ref", function() { return __wbindgen_object_clone_ref; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_cb_drop", function() { return __wbindgen_cb_drop; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_string_new", function() { return __wbindgen_string_new; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_new_abda76e883ba8a5f", function() { return __wbg_new_abda76e883ba8a5f; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_stack_658279fe44541cf6", function() { return __wbg_stack_658279fe44541cf6; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_error_f851667af71bcfc6", function() { return __wbg_error_f851667af71bcfc6; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_string_get", function() { return __wbindgen_string_get; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_boolean_get", function() { return __wbindgen_boolean_get; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_number_get", function() { return __wbindgen_number_get; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_number_new", function() { return __wbindgen_number_new; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_instanceof_WebGl2RenderingContext_61bb2cb23346dbb7", function() { return __wbg_instanceof_WebGl2RenderingContext_61bb2cb23346dbb7; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_beginQuery_fb152d8d84f2b130", function() { return __wbg_beginQuery_fb152d8d84f2b130; });
@@ -1045,6 +1103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_globalThis_87cbb8506fecf3a9", function() { return __wbg_globalThis_87cbb8506fecf3a9; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_global_c85a9259e621f3db", function() { return __wbg_global_c85a9259e621f3db; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_is_undefined", function() { return __wbindgen_is_undefined; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_from_67ca20fa722467e6", function() { return __wbg_from_67ca20fa722467e6; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_of_892d7838f8e4cc20", function() { return __wbg_of_892d7838f8e4cc20; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_push_49c286f04dd3bf59", function() { return __wbg_push_49c286f04dd3bf59; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbg_call_9495de66fdbe016b", function() { return __wbg_call_9495de66fdbe016b; });
@@ -1064,17 +1123,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_debug_string", function() { return __wbindgen_debug_string; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_throw", function() { return __wbindgen_throw; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_memory", function() { return __wbindgen_memory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper805", function() { return __wbindgen_closure_wrapper805; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper807", function() { return __wbindgen_closure_wrapper807; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper809", function() { return __wbindgen_closure_wrapper809; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper811", function() { return __wbindgen_closure_wrapper811; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper813", function() { return __wbindgen_closure_wrapper813; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper815", function() { return __wbindgen_closure_wrapper815; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper817", function() { return __wbindgen_closure_wrapper817; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper819", function() { return __wbindgen_closure_wrapper819; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper821", function() { return __wbindgen_closure_wrapper821; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper952", function() { return __wbindgen_closure_wrapper952; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper3709", function() { return __wbindgen_closure_wrapper3709; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper823", function() { return __wbindgen_closure_wrapper823; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper825", function() { return __wbindgen_closure_wrapper825; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper827", function() { return __wbindgen_closure_wrapper827; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper829", function() { return __wbindgen_closure_wrapper829; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper959", function() { return __wbindgen_closure_wrapper959; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__wbindgen_closure_wrapper3721", function() { return __wbindgen_closure_wrapper3721; });
 let wasm;
 function __wbg_set_wasm(val) {
     wasm = val;
@@ -1101,13 +1160,26 @@ function takeObject(idx) {
     return ret;
 }
 
-function addHeapObject(obj) {
-    if (heap_next === heap.length) heap.push(heap.length + 1);
-    const idx = heap_next;
-    heap_next = heap[idx];
+function isLikeNone(x) {
+    return x === undefined || x === null;
+}
 
-    heap[idx] = obj;
-    return idx;
+let cachedFloat64Memory0 = null;
+
+function getFloat64Memory0() {
+    if (cachedFloat64Memory0 === null || cachedFloat64Memory0.byteLength === 0) {
+        cachedFloat64Memory0 = new Float64Array(wasm.memory.buffer);
+    }
+    return cachedFloat64Memory0;
+}
+
+let cachedInt32Memory0 = null;
+
+function getInt32Memory0() {
+    if (cachedInt32Memory0 === null || cachedInt32Memory0.byteLength === 0) {
+        cachedInt32Memory0 = new Int32Array(wasm.memory.buffer);
+    }
+    return cachedInt32Memory0;
 }
 
 const lTextDecoder = typeof TextDecoder === 'undefined' ? (0, module.require)('util').TextDecoder : TextDecoder;
@@ -1127,6 +1199,15 @@ function getUint8Memory0() {
 
 function getStringFromWasm0(ptr, len) {
     return cachedTextDecoder.decode(getUint8Memory0().subarray(ptr, ptr + len));
+}
+
+function addHeapObject(obj) {
+    if (heap_next === heap.length) heap.push(heap.length + 1);
+    const idx = heap_next;
+    heap_next = heap[idx];
+
+    heap[idx] = obj;
+    return idx;
 }
 
 let WASM_VECTOR_LEN = 0;
@@ -1184,28 +1265,6 @@ function passStringToWasm0(arg, malloc, realloc) {
 
     WASM_VECTOR_LEN = offset;
     return ptr;
-}
-
-function isLikeNone(x) {
-    return x === undefined || x === null;
-}
-
-let cachedInt32Memory0 = null;
-
-function getInt32Memory0() {
-    if (cachedInt32Memory0 === null || cachedInt32Memory0.byteLength === 0) {
-        cachedInt32Memory0 = new Int32Array(wasm.memory.buffer);
-    }
-    return cachedInt32Memory0;
-}
-
-let cachedFloat64Memory0 = null;
-
-function getFloat64Memory0() {
-    if (cachedFloat64Memory0 === null || cachedFloat64Memory0.byteLength === 0) {
-        cachedFloat64Memory0 = new Float64Array(wasm.memory.buffer);
-    }
-    return cachedFloat64Memory0;
 }
 
 function debugString(val) {
@@ -1297,19 +1356,19 @@ function makeMutClosure(arg0, arg1, dtor, f) {
 
     return real;
 }
-function __wbg_adapter_26(arg0, arg1, arg2) {
+function __wbg_adapter_28(arg0, arg1, arg2) {
     wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0d6d4a2aa4e305aa(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_43(arg0, arg1) {
+function __wbg_adapter_45(arg0, arg1) {
     wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h3fe02e25275af17e(arg0, arg1);
 }
 
-function __wbg_adapter_46(arg0, arg1, arg2) {
+function __wbg_adapter_48(arg0, arg1, arg2) {
     wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h837946e50862391f(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_49(arg0, arg1, arg2) {
+function __wbg_adapter_51(arg0, arg1, arg2) {
     wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hb90c4e155ca8d91e(arg0, arg1, addHeapObject(arg2));
 }
 
@@ -1364,7 +1423,7 @@ function handleError(f, args) {
         wasm.__wbindgen_exn_store(addHeapObject(e));
     }
 }
-function __wbg_adapter_671(arg0, arg1, arg2, arg3) {
+function __wbg_adapter_675(arg0, arg1, arg2, arg3) {
     wasm.wasm_bindgen__convert__closures__invoke2_mut__h7a9944eeaf44bae4(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
 }
 
@@ -1425,13 +1484,16 @@ class WaterfallGraph {
     * @param {number} height
     * @param {number} data_length
     * @param {number} data_heigth_show
+    * @param {number} min
+    * @param {number} max
+    * @param {Array<any>} color
     * @param {string} element_id
     * @returns {WaterfallGraph}
     */
-    static new(width, height, data_length, data_heigth_show, element_id) {
+    static new(width, height, data_length, data_heigth_show, min, max, color, element_id) {
         const ptr0 = passStringToWasm0(element_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         const len0 = WASM_VECTOR_LEN;
-        const ret = wasm.waterfallgraph_new(width, height, data_length, data_heigth_show, ptr0, len0);
+        const ret = wasm.waterfallgraph_new(width, height, data_length, data_heigth_show, min, max, addHeapObject(color), ptr0, len0);
         return WaterfallGraph.__wrap(ret);
     }
     /**
@@ -1635,6 +1697,23 @@ function __wbindgen_object_drop_ref(arg0) {
     takeObject(arg0);
 };
 
+function __wbindgen_is_array(arg0) {
+    const ret = Array.isArray(getObject(arg0));
+    return ret;
+};
+
+function __wbindgen_number_get(arg0, arg1) {
+    const obj = getObject(arg1);
+    const ret = typeof(obj) === 'number' ? obj : undefined;
+    getFloat64Memory0()[arg0 / 8 + 1] = isLikeNone(ret) ? 0 : ret;
+    getInt32Memory0()[arg0 / 4 + 0] = !isLikeNone(ret);
+};
+
+function __wbindgen_string_new(arg0, arg1) {
+    const ret = getStringFromWasm0(arg0, arg1);
+    return addHeapObject(ret);
+};
+
 function __wbindgen_object_clone_ref(arg0) {
     const ret = getObject(arg0);
     return addHeapObject(ret);
@@ -1648,11 +1727,6 @@ function __wbindgen_cb_drop(arg0) {
     }
     const ret = false;
     return ret;
-};
-
-function __wbindgen_string_new(arg0, arg1) {
-    const ret = getStringFromWasm0(arg0, arg1);
-    return addHeapObject(ret);
 };
 
 function __wbg_new_abda76e883ba8a5f() {
@@ -1689,13 +1763,6 @@ function __wbindgen_boolean_get(arg0) {
     const v = getObject(arg0);
     const ret = typeof(v) === 'boolean' ? (v ? 1 : 0) : 2;
     return ret;
-};
-
-function __wbindgen_number_get(arg0, arg1) {
-    const obj = getObject(arg1);
-    const ret = typeof(obj) === 'number' ? obj : undefined;
-    getFloat64Memory0()[arg0 / 8 + 1] = isLikeNone(ret) ? 0 : ret;
-    getInt32Memory0()[arg0 / 4 + 0] = !isLikeNone(ret);
 };
 
 function __wbindgen_number_new(arg0) {
@@ -3060,6 +3127,11 @@ function __wbindgen_is_undefined(arg0) {
     return ret;
 };
 
+function __wbg_from_67ca20fa722467e6(arg0) {
+    const ret = Array.from(getObject(arg0));
+    return addHeapObject(ret);
+};
+
 function __wbg_of_892d7838f8e4cc20(arg0) {
     const ret = Array.of(getObject(arg0));
     return addHeapObject(ret);
@@ -3087,7 +3159,7 @@ function __wbg_new_9d3a9ce4282a18a8(arg0, arg1) {
             const a = state0.a;
             state0.a = 0;
             try {
-                return __wbg_adapter_671(a, state0.b, arg0, arg1);
+                return __wbg_adapter_675(a, state0.b, arg0, arg1);
             } finally {
                 state0.a = a;
             }
@@ -3171,58 +3243,58 @@ function __wbindgen_memory() {
     return addHeapObject(ret);
 };
 
-function __wbindgen_closure_wrapper805(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
-    return addHeapObject(ret);
-};
-
-function __wbindgen_closure_wrapper807(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
-    return addHeapObject(ret);
-};
-
-function __wbindgen_closure_wrapper809(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
-    return addHeapObject(ret);
-};
-
-function __wbindgen_closure_wrapper811(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
-    return addHeapObject(ret);
-};
-
 function __wbindgen_closure_wrapper813(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
     return addHeapObject(ret);
 };
 
 function __wbindgen_closure_wrapper815(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
     return addHeapObject(ret);
 };
 
 function __wbindgen_closure_wrapper817(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
     return addHeapObject(ret);
 };
 
 function __wbindgen_closure_wrapper819(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_26);
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
     return addHeapObject(ret);
 };
 
 function __wbindgen_closure_wrapper821(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 179, __wbg_adapter_43);
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
     return addHeapObject(ret);
 };
 
-function __wbindgen_closure_wrapper952(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 250, __wbg_adapter_46);
+function __wbindgen_closure_wrapper823(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
     return addHeapObject(ret);
 };
 
-function __wbindgen_closure_wrapper3709(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 1262, __wbg_adapter_49);
+function __wbindgen_closure_wrapper825(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
+    return addHeapObject(ret);
+};
+
+function __wbindgen_closure_wrapper827(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_28);
+    return addHeapObject(ret);
+};
+
+function __wbindgen_closure_wrapper829(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_45);
+    return addHeapObject(ret);
+};
+
+function __wbindgen_closure_wrapper959(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 250, __wbg_adapter_48);
+    return addHeapObject(ret);
+};
+
+function __wbindgen_closure_wrapper3721(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 1263, __wbg_adapter_51);
     return addHeapObject(ret);
 };
 

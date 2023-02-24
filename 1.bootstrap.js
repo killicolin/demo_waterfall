@@ -19,8 +19,9 @@ let component_id="spectre-analyser";
 let mouse_value_display_id="mouse-value";
 let slider_id="waterfall-slider";
 let time_value_id="time";
-let time_button_id="time_valid";
-
+let time_button_id="time-valid";
+let tick_value_id="tick";
+let tick_button_id="tick-valid";
 const data = readTextFile("data/test-data.jsonl");
 var max = -100000.0;
 var min = 100000.0;
@@ -46,6 +47,8 @@ let mouse_value_display = document.getElementById(mouse_value_display_id);
 let slider = document.getElementById(slider_id);
 let time_value=document.getElementById(time_value_id);
 let time_button=document.getElementById(time_button_id);
+let tick_value=document.getElementById(tick_value_id);
+let tick_button=document.getElementById(tick_button_id);
 let should_look_mouse_value=false;
 requestAnimationFrame(step);
 
@@ -57,8 +60,12 @@ waterfallCanvas.addEventListener("mouseleave", () =>
   should_look_mouse_value=false
 );
 
+tick_button.addEventListener("click", () => {
+  data_per_tick=tick_value.value;
+}
+);
+
 time_button.addEventListener("click", () => {
-    console.log("test");
     clearInterval(interval_id);
     interval_id=setInterval(add_basic_data, time_value.value);
   }
@@ -68,12 +75,16 @@ slider.addEventListener('input', () => {
   waterfall.set_slider_position(parseInt(slider.value));
 });
 
+var data_per_tick = 1;
+
 function add_basic_data() {
-  let i = data_size % data.length;
-  data_size=waterfall.add_data(data[i].trace);
-  //data_size=waterfall.add_data(waterfall.debug_data(data_size,-60,60));
-  slider.max=data_size;
-  slider.value=waterfall.get_slider_position();
+  for (let _index = 0; _index < data_per_tick; _index++) {
+    let i = data_size % data.length;
+    data_size=waterfall.add_data(data[i].trace);
+    //data_size=waterfall.add_data(waterfall.debug_data(data_size,-60,60));
+    slider.max=data_size;
+    slider.value=waterfall.get_slider_position();
+  }
 }
 
 

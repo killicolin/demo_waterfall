@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Demo wasm graph</title>
     
-    <script type="module" crossorigin src="/demo_waterfall/assets/index-0e3beab6.js"></script>
-    <link rel="stylesheet" href="/demo_waterfall/assets/index-8e0a408b.css">
+    <script type="module" crossorigin src="/demo_waterfall/assets/index-5952663d.js"></script>
+    <link rel="stylesheet" href="/demo_waterfall/assets/index-74dfce80.css">
   </head>
   <body>
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
@@ -27,6 +27,16 @@
         </div>
       </div>
       <div  class="space">
+        <p>Current Time : <b id="timeU64"> -</b></p>
+        
+        <div> Rectangle to add:<br>
+          Start :  <input id="rect_start" type="bigint" value ="0"/> Duration : <input id="rect_duration" type="bigint" value ="0"/> <br>
+          Begin frequency: <input id="rect_fq_start" type="number" value ="0" /> End frequency: <input id="rect_fq_end" type="number" value ="0"/> <br>
+          Color: 
+          <hex-color-picker color="#1e88e5"></hex-color-picker>
+          <button id="add_rect"> Add Rectangle </button>
+        </div>
+
         <p>to change delta time between data in ms :</p> 
         <input id="time" type="number" value ="50"/>
         <button id="time-valid"> Valid </button>
